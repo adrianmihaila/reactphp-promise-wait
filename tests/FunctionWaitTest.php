@@ -1,18 +1,14 @@
 <?php
 
 require_once __DIR__ . '/../src/functions.php';
-require_once __DIR__ . '/../tests/BaseTestCase.php';
 
 use React\Promise\PromiseInterface;
 
 /**
- * Class FunctionWaitTestCase
+ * Class FunctionWaitTest
  */
-class FunctionWaitTestCase extends BaseTestCase {
+class FunctionWaitTest extends BaseTestCase {
 
-    /**
-     * @test React\Promise\wait()
-     */
     public function testWaitResolved() {
         $promise = $this->createPromiseResolved(rand(1, 9));
         $result = $promise->then(function ($value) {
