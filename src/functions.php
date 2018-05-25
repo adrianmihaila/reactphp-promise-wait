@@ -24,9 +24,7 @@ function wait(PromiseInterface $promise) {
     if ($isRejected) {
         if (!$exception instanceof \Exception) {
             $exception = new \UnexpectedValueException(
-                'Promise rejected with unexpected value of type ' . (is_object(($exception) ? get_class($exception) : gettype($exception))),
-                0,
-                $exception instanceof \Throwable ? $exception : null
+                'Promise rejected with unexpected value of type ' . (is_object($exception) ? get_class($exception) : gettype($exception))
             );
         }
 
