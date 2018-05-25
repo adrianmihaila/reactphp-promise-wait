@@ -1,8 +1,30 @@
 {
-    "require": {
-        "react/promise": "^2.5"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^6.5"
+  "name": "adrianmihaila/reactphp-promise-wait",
+  "description": "Provides a wait functionality for ReactPHP/Promise library.",
+  "keywords": [
+    "sync",
+    "async",
+    "wait",
+    "Promise",
+    "ReactPHP"
+  ],
+  "homepage": "https://github.com/adrianmihaila/reactphp-promise-wait",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adrian Mihaila",
+      "email": "adi.mihaila@outlook.com"
     }
+  ],
+  "autoload": {
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "require": {
+    "react/promise": "^2.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
+  }
 }
