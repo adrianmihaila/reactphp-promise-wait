@@ -1,5 +1,5 @@
 {
-  "name": "adrianmihaila/reactphp-promise-wait",
+  "name": "adimihaila/promise-wait",
   "description": "Provides a wait functionality for ReactPHP/Promise library.",
   "keywords": [
     "sync",
