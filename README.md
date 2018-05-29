@@ -27,5 +27,5 @@ $value = doAsyncSomething()
         return $response++;
     });
     
-echo \React\Promise\wait($value);
+echo \AdiMihaila\Promise\wait($value);
 ```

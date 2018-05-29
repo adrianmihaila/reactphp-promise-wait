@@ -12,12 +12,14 @@ class FunctionWaitTest extends BaseTestCase {
     public function testWaitResolved() {
         $promise = $this->createPromiseResolved(rand(1, 9));
         $result = $promise->then(function ($value) {
+            sleep(5);
+
             return $value * 2;
         });
 
         $this->assertInstanceOf(PromiseInterface::class, $result);
 
-        $value = \React\Promise\wait($result);
+        $value = \AdiMihaila\Promise\wait($result);
 
         $this->assertNotInstanceOf(PromiseInterface::class, $value);
         $this->assertTrue(is_int($value));
@@ -29,7 +31,7 @@ class FunctionWaitTest extends BaseTestCase {
         $this->expectException(\Exception::class);
         $this->expectExceptionMessage('test exception');
 
-        $value = \React\Promise\wait($promise);
+        $value = \AdiMihaila\Promise\wait($promise);
     }
 
     public function testWaitRejectedWithNullWillThrowsUnexpectedValueException() {
@@ -38,6 +40,6 @@ class FunctionWaitTest extends BaseTestCase {
         $this->expectException(\UnexpectedValueException::class);
         $this->expectExceptionMessage('Promise rejected with unexpected value of type NULL');
 
-        $value = \React\Promise\wait($promise);
+        $value = \AdiMihaila\Promise\wait($promise);
     }
 }

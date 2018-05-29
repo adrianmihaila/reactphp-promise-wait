@@ -1,6 +1,8 @@
 <?php
 
-namespace React\Promise;
+namespace AdiMihaila\Promise;
+
+use React\Promise\PromiseInterface;
 
 function wait(PromiseInterface $promise) {
     $result = null;
